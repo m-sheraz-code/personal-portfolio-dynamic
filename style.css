@@ -1,0 +1,791 @@
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #d0d0d0;
+    background-color: #000000;
+}
+
+
+/*Scroll-bar*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#52b0e2;
+}
+
+
+
+/* Navigation bar */
+nav {
+    background: #2B98D4;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    flex-shrink: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding-left: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #ffffff;
+    color: black;
+}
+
+.language-switcher {
+    flex-shrink: 0;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.andar {
+   display: none;
+}
+
+.language-switcher img {
+    transition: transform 0.2s;
+}
+
+.language-switcher img:hover {
+    transform: scale(1.1);
+}
+
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between; /* Align the text on the left and image on the right */
+    align-items: center;
+    padding: 50px 20px;
+    color: rgb(255, 255, 255);
+    height: 500px;
+}
+
+/* Left section - Name and description */
+header .name-des {
+    max-width: 60%; /* Adjusts the width of the text section */
+}
+
+header .name-des h1 {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin: 0;
+}
+
+header .name-des h1 span {
+    color: #2B98D4;
+    text-decoration: underline wavy #C7FF00;
+    text-underline-offset: 15px;
+}
+
+header .name-des p {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin: 10px 0 0 0;
+}
+
+/* Right section - Profile picture */
+header .pp {
+    width: 300px; /* Adjust width as needed */
+    height: 300px;
+    border-radius: 50%; /* Make the image circular */
+    overflow: hidden;
+    border: 5px solid #2B98D4; /* Blue border around the image */
+    margin-right: 150px;
+}
+
+header .pp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+/* Main sections */
+.section {
+    margin: 20px 15px;
+    padding: 50px 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px #2b99d466;
+    background-color: #1A1A1A;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+    color: #2B98D4;
+    padding-bottom: 10px;
+    text-decoration: underline wavy #C7FF00;
+    text-underline-offset: 10px; /* space between underlinr and text */
+}
+
+
+/*About Me*/
+#about p{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Educations */
+.educations {
+    padding-left: 50px;
+}
+
+.educations li {
+    padding: 0px;
+    list-style: none; /* Removes default list bullet points */
+    margin-bottom: 20px; /* Adds space between list items */
+}
+
+.educations li::before {
+    content: '\2713'; /* Check mark */
+    margin-right: 8px; /* Space between check mark and text */
+    color:#2B98D4;
+    font-weight: bold;
+}
+
+.educations li strong {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.educations span {
+    font-weight: bold;
+    color: white;
+}
+
+/* Flexbox for centering and spacing content */
+.education {
+    display: flex;
+    flex-direction: row; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: start; /* Centers text within each element */
+    justify-content: space-between;
+    padding-left: 40px;
+}
+
+.education h4{
+    width: 15%;
+    text-align: left;
+}
+
+.education p{
+    width: 60%;
+}
+
+
+/*Skills*/
+
+.skills {
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: space-between; /* Evenly space the elements */
+    gap: 30px; /* Space between the skill sections */
+    padding: 10px;
+    padding-left: 50px;
+}
+
+.detail1, .detail2 {
+    width: 50%; /* Each section takes up 50% of the available space */
+}
+
+.skills strong {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.skills strong::before {
+    content: '\2713'; /* Checkmark */
+    margin-right: 8px; /* Space between checkmark and text */
+    color: #2B98D4;
+    font-weight: bold;
+}
+
+.skills ul {
+    list-style-type: none; /* Remove default bullet points */
+    color: white;
+    display: flex; /* Display list items in a row */
+    justify-content: start;
+    flex-wrap: wrap; /* Wrap items if they overflow */
+}
+
+
+.skills .inner-div{
+    border: 2px solid;
+    border-color: #2B98D4;
+    border-radius: 10px;
+    padding-left: 0;
+    margin: 10px 0;
+    padding-top: 20px;
+}
+
+
+.skills li {
+    text-align: center; /* Center the image and text */
+    padding: 10px;
+    position: relative;
+    width: 33%; /* Set a fixed width for each skill item */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.skills li img {
+    width: 50px; /* Set size of the image */
+    height: 50px;
+    margin-bottom: 5px; /* Space between image and text */
+}
+
+.skills li p {
+    margin-top: 5px; /* Space between image and name */
+    font-size: 15px;
+}
+
+
+/* Projects */
+.projects {
+    padding-left: 50px;
+}
+
+.projects li {
+    padding: 0px;
+    list-style: none; /* Removes default list bullet points */
+    margin-bottom: 20px; /* Adds space between list items */
+}
+
+.projects li::before {
+    content: '\2713'; /* Check mark */
+    margin-right: 8px; /* Space between check mark and text */
+    color:#2B98D4;
+    font-weight: bold;
+}
+
+.projects li strong {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.projects span {
+    font-weight: bold;
+    color: white;
+}
+
+/* Flexbox for centering and spacing content */
+.project {
+    display: flex;
+    flex-direction: row; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: start; /* Centers text within each element */
+    justify-content: space-between;
+    padding-left: 40px;
+}
+
+.project h4{
+    width: 15%;
+    text-align: left;
+}
+
+.project p{
+    width: 60%;
+}
+
+.project p a{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 50px;
+    font-size: 15px;
+}
+
+.project p a::before{
+    content: '\2713'; /* Checkmark */
+    margin-right: 8px; /* Space between checkmark and text */
+    color: #2B98D4;
+    font-weight: bold;
+}
+
+
+/*Certificates*/
+
+.Certifications {
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Certifications li {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.Certifications li::before {
+    content: '\2713';
+    margin-right: 8px;
+    color: #2B98D4;
+    font-weight: bold;
+}
+
+.Certifications li strong {
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.Certificate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+}
+
+.Certificate .overlay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Certificate img {
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullscreen-overlay img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.fullscreen-overlay.active {
+    display: flex;
+}
+
+.Certificate h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.Certificate h4 i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+
+
+/* Video content */
+.video-content {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+}
+
+.video-content video {
+    max-width: 100%;
+    border: 5px solid #52b0e2;
+    border-radius: 8px;
+    align-self: center;
+}
+
+/* Social Media Feed */
+
+.social-icons {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    padding-left: 50px;
+}
+
+/* Individual Social Icon */
+.social-icon img {
+    width: 40px; /* Adjust icon size as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    opacity: 0.8; /* Slightly dim on hover */
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 30px;
+    position: relative; /* Ensure footer positioning context */
+}
+
+/* Go to Top Button */
+footer a {
+    position: fixed; /* Make it fixed so it stays visible on scroll */
+    bottom: 20px; /* Position it at the bottom of the viewport */
+    right: 20px; /* Position it at the right side of the viewport */
+    color: black;
+    background-color: #C7FF00;
+    border-radius: 50%; /* Rounded button */
+    text-decoration: none;
+    text-align: center;
+    font-weight: bolder;
+    padding: 8px 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Add some shadow for better visibility */
+    transition: transform 0.3s ease; /* Smooth transform effect */
+    z-index: 100; /* Ensure it appears above other elements */
+}
+
+footer a:hover {
+    transform: scale(1.1); /* Slight increase on hover */
+}
+
+
+
+
+/*..............Responsive.................*/
+
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+
+    /*nav bar*/
+    nav {
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -250px; /* Start hidden off-screen */
+        width: 200px;
+        height: 100%;
+        background: #2B98D4;
+        transition: left 0.3s ease;
+        padding-top: 80px; /* Add padding to push items below the header */
+        z-index: 2000;
+        justify-content: start;
+    }
+
+    nav ul.show {
+        left: 0; /* Slide into view */
+    }
+
+    .andar {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    .bahir{
+        display: none;
+    }
+    .nav-links li .language-switcher{
+        align-self: center;
+        padding-left: 20px;
+    }
+
+    /*Sections*/
+    .section {
+        margin: 10px 10px;
+        padding: 30px 10px;
+        border-radius: 5px;
+    }
+    
+    .section h2 {
+        margin-bottom: 10px;
+        font-size: 25px;
+        color: #2B98D4;
+        padding-bottom: 5px;
+        text-decoration: underline wavy #C7FF00;
+        text-underline-offset: 8px; /* space between underlinr and text */
+    }
+
+    /*About Me*/
+    #about p{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 13px;
+    }
+
+    /* Educations */
+    .educations {
+        padding-left: 10px;
+    }
+
+    .educations li {
+        margin-bottom: 10px; /* Adds space between list items */
+    }
+
+    .educations li::before {
+        margin-right: 5px; /* Space between check mark and text */
+    }
+
+    .educations li strong {
+        font-size: 15px;
+    }
+
+    /* Flexbox for centering and spacing content */
+    .education {
+        padding-left: 30px;
+    }
+
+    .education h4{
+        width: 70%;
+        font-size: 10px;
+        padding-right: 50px;
+    }
+
+    .education h4 i{
+        font-size: 10px;
+    }
+
+
+    .education p{
+        width: 50%;
+        font-size: 12px;
+    }
+
+    /*Skills*/
+    .skills {
+        gap: 20px; /* Space between the skill sections */
+        padding: 8px;
+        padding-left: 20px;
+    }
+
+    .skills strong {
+        color: #ffffff;
+        font-size: 15px;
+    }
+
+    .skills strong::before {
+        margin-right: 5px; /* Space between checkmark and text */
+    }
+
+    .skills .inner-div{
+        border-radius: 8px;
+        margin: 5px 0;
+        padding-top: 10px;
+    }
+
+    .skills li {
+        padding: 5px;
+        padding-bottom: 10px;
+        width: 50%; /* Set a fixed width for each skill item */   
+    }
+
+    .skills li img {
+        width: 20px; /* Set size of the image */
+        height: 20px;
+        margin-bottom: 3px; /* Space between image and text */
+    }
+
+    .skills li p {
+        margin-top: 3px; /* Space between image and name */
+        font-size: 9px;
+    }
+
+    
+    /* Educations */
+    .projects {
+        padding-left: 10px;
+    }
+
+    .projects li {
+        margin-bottom: 10px; /* Adds space between list items */
+    }
+
+    .projects li::before {
+        margin-right: 5px; /* Space between check mark and text */
+    }
+
+    .projects li strong {
+        font-size: 15px;
+    }
+
+    /* Flexbox for centering and spacing content */
+    .project {
+        padding-left: 30px;
+    }
+
+    .project h4{
+        width: 70%;
+        font-size: 10px;
+        padding-right: 50px;
+    }
+
+    .project h4 i{
+        font-size: 10px;
+    }
+
+
+    .project p{
+        width: 50%;
+        font-size: 12px;
+    }
+
+    .project p a{
+        padding-left: 30px;
+        font-size: 12px;
+    }
+    
+    .project p a::before{
+        margin-right: 5px; /* Space between checkmark and text */
+    }
+
+    
+    /*Certificates*/
+    .Certifications {
+        padding-left: 30px;
+    }
+
+    .Certifications li {
+        margin-bottom: 10px;
+    }
+
+    .Certifications li::before {
+        margin-right: 5px;
+    }
+
+    .Certifications li strong {
+        font-size: 15px;
+    }
+
+    .Certificate img {
+        padding: 10px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .Certificate h4 {
+        margin: 8px 0;
+        font-size: 13px;
+    }
+
+    .Certificate h4 i {
+        font-size: 15px;
+        margin-right: 3px;
+    }
+
+    
+    /* Video content */
+    .video-content video {
+        border: 5px solid #52b0e2;
+        border-radius: 5px;
+    }
+
+
+    /* Social Media Feed */
+    .social-icons {
+        gap: 15px;
+        padding-left: 30px;
+    }
+
+    .social-icon img {
+        width: 30px; /* Adjust icon size as needed */
+    }
+
+    footer a {
+        bottom: 15px; /* Adjust position on smaller screens */
+        right: 15px;
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    /* Header */
+    header {
+        padding: 50px 10px;
+        height: auto;
+    }
+
+    header .name-des {
+        max-width: 60%;
+        padding-left: 20px;
+    }
+
+    header .name-des h1 {
+        font-size: 30px;
+    }
+
+    header .name-des p {
+        font-size: 15px;
+    }
+
+    header .pp {
+        width: 200px; 
+        height: 200px;
+        margin-right: 20px;
+    }
+}
