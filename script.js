@@ -9,7 +9,7 @@ const personalData = {
     education: [
         {
             degree: "Bachelor in Computer Science",
-            description: "Currently pursuing a Bachelor's degree at <span>Information Technology University,</span> 5th semester, <span>CGPA 2.87.</span>",
+            description: "Currently pursuing a Bachelor's degree at <span>Information Technology University,</span> 5th semester, <span>CGPA 2.43.</span>",
             date: "Current"
         },
         {
