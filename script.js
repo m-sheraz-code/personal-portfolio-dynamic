@@ -79,6 +79,8 @@ document.querySelector(".name-des h1 span").innerText = personalData.name;
 document.querySelector(".name-des p").innerText = personalData.description;
 document.querySelector(".pp img").src = personalData.profilePicture;
 document.querySelector("#about p").innerText = personalData.about;
+document.title = personalData.name;
+document.querySelector("footer p").innerHTML += personalData.name;
 
 // Populate Education Section
 const educationList = document.querySelector(".educations");
