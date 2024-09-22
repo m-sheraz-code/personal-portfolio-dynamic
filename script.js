@@ -96,31 +96,66 @@ personalData.education.forEach(edu => {
     `;
 });
 
+
 // Populate Soft Skills Section
 const softSkillsList = document.querySelector(".detail1 .inner-div");
+let ulElementSoft = document.createElement("ul"); // Start with an empty <ul>
+let countSoft = 0;
+
 personalData.softSkills.forEach(skill => {
-    softSkillsList.innerHTML += `
-        <ul>
-            <li>
-                <img src="${skill.icon}" alt="${skill.name} Icon">
-                <p>${skill.name}</p>
-            </li>
-        </ul>
+    if (countSoft === 3) {
+        // Append the current <ul> and create a new one after every 3rd <li>
+        softSkillsList.appendChild(ulElementSoft);
+        ulElementSoft = document.createElement("ul");
+        countSoft = 0; // Reset count
+    }
+
+    // Create <li> for each skill
+    const liElement = document.createElement("li");
+    liElement.innerHTML = `
+        <img src="${skill.icon}" alt="${skill.name} Icon">
+        <p>${skill.name}</p>
     `;
+
+    ulElementSoft.appendChild(liElement); // Add the <li> to the current <ul>
+    countSoft++;
 });
+
+// Append the final <ul> if it has any items
+if (countSoft > 0) {
+    softSkillsList.appendChild(ulElementSoft);
+}
+
 
 // Populate Hard Skills Section
 const hardSkillsList = document.querySelector(".detail2 .inner-div");
+let ulElement = document.createElement("ul"); // Start with an empty <ul>
+let count = 0;
+
 personalData.hardSkills.forEach(skill => {
-    hardSkillsList.innerHTML += `
-        <ul>
-            <li>
-                <img src="${skill.icon}" alt="${skill.name} Icon">
-                <p>${skill.name}</p>
-            </li>
-        </ul>
+    if (count === 3) {
+        // Append the current <ul> and create a new one after every 3rd <li>
+        hardSkillsList.appendChild(ulElement);
+        ulElement = document.createElement("ul");
+        count = 0; // Reset count
+    }
+
+    // Create <li> for each skill
+    const liElement = document.createElement("li");
+    liElement.innerHTML = `
+        <img src="${skill.icon}" alt="${skill.name} Icon">
+        <p>${skill.name}</p>
     `;
+
+    ulElement.appendChild(liElement); // Add the <li> to the current <ul>
+    count++;
 });
+
+// Append the final <ul> if it has any items
+if (count > 0) {
+    hardSkillsList.appendChild(ulElement);
+}
+
 
 // Populate Projects Section
 const projectsList = document.querySelector(".projects");
