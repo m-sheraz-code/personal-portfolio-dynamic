@@ -9,17 +9,17 @@ const personalData = {
     education: [
         {
             degree: "Bachelor in Computer Science",
-            description: "Currently pursuing a Bachelor's degree at <span>Information Technology University,</span> 5th semester, <span>CGPA 2.43.</span>",
+            description: "Currently pursuing a Bachelor's degree at <span>Information Technology University,</span> 5th semester.",
             date: "Current"
         },
         {
             degree: "Intermediate",
-            description: "Completed Intermediate education from <span>Govt. Degree College Shahdrah</span> with <span>80%.</span>",
+            description: "Completed Intermediate education from <span>Govt. Degree College Shahdrah</span> with 80%.",
             date: "2021-04-26"
         },
         {
             degree: "Matriculation",
-            description: "Completed matriculation from <span>Govt. High School Shakargarh</span> with <span>91%.</span>",
+            description: "Completed matriculation from <span>Govt. High School Shakargarh</span> with 91%.",
             date: "2019-02-13"
         }
     ],
