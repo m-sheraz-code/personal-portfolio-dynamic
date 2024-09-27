@@ -234,42 +234,47 @@ document.querySelectorAll('.language-switcher img').forEach(img => {
 function updateContentBasedOnLanguage(language) {
 // Example translations for demonstration purposes
 const translations = {
-en: {
-    name: "Muhammad Sheraz",
-    about: "About",
-    skills: "Skills",
-    projects: "Projects",
-    certifications: "Certifications",
-    contact: "Contact"
-},
-ar: {
-    name: "محمد شيراز",
-    about: "حول",
-    skills: "المهارات",
-    projects: "المشاريع",
-    certifications: "الشهادات",
-    contact: "اتصل"
-},
-ur: {
-    name: "محمد شیراز",
-    about: "کے بارے میں",
-    skills: "مہارتیں",
-    projects: "پروجیکٹس",
-    certifications: "سرٹیفیکیشن",
-    contact: "رابطہ"
-},
-fr: {
-    name: "Muhammad Sheraz",
-    about: "À propos",
-    skills: "Compétences",
-    projects: "Projets",
-    certifications: "Certifications",
-    contact: "Contact"
-}
-};
-
+    en: {
+        name: "Muhammad Sheraz",
+        about: "About",
+        skills: "Skills",
+        projects: "Projects",
+        certifications: "Certifications",
+        contact: "Contact",
+        ranking: "I am passionate about web development, with a strong focus on frontend technologies. I have a deep appreciation for both web and game development, which continue to inspire and drive my career."
+    },
+    ar: {
+        name: "محمد شيراز",
+        about: "حول",
+        skills: "المهارات",
+        projects: "المشاريع",
+        certifications: "الشهادات",
+        contact: "اتصل",
+        ranking: "أنا شغوف بتطوير الويب، مع تركيز قوي على تقنيات الواجهة الأمامية. لدي تقدير عميق لكل من تطوير الويب والألعاب، اللذان يستمران في إلهامي ودفع مسيرتي المهنية."
+    },
+    ur: {
+        name: "محمد شیراز",
+        about: "کے بارے میں",
+        skills: "مہارتیں",
+        projects: "پروجیکٹس",
+        certifications: "سرٹیفیکیشن",
+        contact: "رابطہ",
+        ranking: "مجھے ویب ڈویلپمنٹ کا جنون ہے، خاص طور پر فرنٹ اینڈ ٹیکنالوجیز پر توجہ مرکوز ہے۔ میں ویب اور گیم ڈویلپمنٹ دونوں کی گہری قدر کرتا ہوں، جو میری پیشہ ورانہ زندگی کو مسلسل متاثر اور متحرک کرتی ہیں۔"
+    },
+    fr: {
+        name: "Muhammad Sheraz",
+        about: "À propos",
+        skills: "Compétences",
+        projects: "Projets",
+        certifications: "Certifications",
+        contact: "Contact",
+        ranking: "Je suis passionné par le développement web, avec un fort accent sur les technologies front-end. J'ai une profonde appréciation pour le développement web et de jeux, qui continuent d'inspirer et de motiver ma carrière."
+    }
+    };
     // To update the name in your header based on the selected language:
     document.querySelector('.name-des span').textContent = translations[language].name;
+    document.querySelector('.name-des p').textContent = translations[language].ranking;
+
 
 
     // Update navigation links based on the selected language

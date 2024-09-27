@@ -535,9 +535,14 @@ footer a:hover {
         height: 100%;
         background: #2B98D4;
         transition: left 0.3s ease;
+        padding-left: 10px;
         padding-top: 80px; /* Add padding to push items below the header */
         z-index: 2000;
         justify-content: start;
+    }
+
+    nav ul li{
+        padding-top: 12px;
     }
 
     nav ul.show {
@@ -546,6 +551,8 @@ footer a:hover {
 
     .andar {
         display: block;
+        padding-top: 20px;
+        padding-left: 30px;
     }
 
     .menu-toggle {
@@ -553,10 +560,6 @@ footer a:hover {
     }
     .bahir{
         display: none;
-    }
-    .nav-links li .language-switcher{
-        align-self: center;
-        padding-left: 20px;
     }
 
     /*Sections*/
